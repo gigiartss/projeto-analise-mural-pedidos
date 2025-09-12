@@ -1,35 +1,33 @@
 * { font-family: Verdana; font-size: 96%; margin:0; padding:0;}
 label { display: block; margin-top: 10px; }
-label.error { float: none; color: rgb(0, 80, 217); margin: 0 .5em 0 0; vertical-align: top; font-size: 10px }
+label.error { float: none; color: rgb(217, 0, 0); margin: 0 .5em 0 0; vertical-align: top; font-size: 10px }
 p { clear: both; }
 .submit { margin-top: 1em; }
 em { font-weight: bold; padding-right: 1em; vertical-align: top; }
-body{
-	background:url(images/bg.png) repeat;
-}
+
 
 #main{
-	width:500px;
+	width:300px;
 	margin:auto;
 }
 
 #geral{
-	width:500px;
+	width:50px;
 	background:#FFFFFF;
 	float:left;
 }
 
 #header{
-	width:500px;
-	height:81px;
-	background:url(images/header.jpg);
+	width: 500px;
+	height: 50px;
 	float:left;
+	padding-top: 150PX
 }
 
 .recados {
 	float: left;
 	width: 480px;
-	margin-bottom: 10px;
+	margin-bottom: 11px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #0066FF;
@@ -39,19 +37,17 @@ body{
 }
 
 #header h1 {
-	font-family: "Trebuchet MS", Tahoma, Verdana, "Agency FB", Arial;
-	font-size: 18px;
+	font-size: 25px;
 	font-style: normal;
 	font-weight: bold;
-	color: #9d00ff;
-	margin-top: 20px;
-	margin-left: 5px;
+	color: #ff212c;
+	margin-left: 10px
 }
 #header p {
 	font-size: 13px;
 	font-style: normal;
-	color: #999999;
-	margin-left: 5px;
+	color: #ff2f2f;
+	margin: left 10px;
 }
 #header a {
 	font-weight: bold;
@@ -60,51 +56,41 @@ body{
 #formulario_mural {
 	text-align: center;
 	float: left;
-	width: 480px;
+	width: 250px;
 	margin-bottom: 10px;
-	background:#F5F5F5;
+	background:#ff4848;
 	padding:10px;
+	border-radius: 10%;
 }
 #mural input{
 	width: 150px;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	margin-top: 3px;
-	border: 1px solid #666666;
+	border: 1px solid  #ff2f2f;;
 }
 #mural textarea {
 	padding: 5px;
 	height: 90px;
 	width: 140px;
-	border: 1px solid #666666;
+	border: 1px solid  #ff2f2f;;
 }
 .btn {
 	padding: 7px;
 	width: 100px;
-	border: 1px solid #333333;
+	border: 1px solid #ff0000;
 	cursor:pointer;
+
 }
 
 .btn:hover{
-	background:#333333;
-	color:#999999;
+	background:#ff212c;
+	color:#ffffff;
 }
 
-#footer{
-	width:500px;
-	height:30px;
-	float:left;
-	display:block;
-	background:#ff0000;
-	line-height:30px;
-}
-
-#footer p{
-	color:#666666;
-	padding-left:10px;
-}
 
 #footer a{
-	color:#CCCCCC;
+	color:#da0000;
 	text-decoration:none;
 }
+

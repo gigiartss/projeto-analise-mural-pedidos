@@ -14,6 +14,8 @@ if(isset($_POST['atualiza'])){
     exit;
 }
 
+<img src="
+" alt="">
 // Excluir recado
 if(isset($_GET['acao']) && $_GET['acao'] == 'excluir'){
     $id = intval($_GET['id']);
