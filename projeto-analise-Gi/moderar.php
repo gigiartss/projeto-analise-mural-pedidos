@@ -15,7 +15,7 @@ function deletarImagemCloudinary($public_id, $cloud_name, $api_key, $api_secret)
     ];
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://api.cloudinary.com/v1_1/$dzanv5aip/image/destroy");
+    curl_setopt($ch, CURLOPT_URL, "https://api.cloudinary.com/v1_1/$cloud_name/image/destroy");
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -134,25 +134,4 @@ COMPARAÇÃO:
 </div>
 </body>
 </html>
-
-<div class="produtos-container">
-    <?php while($res = mysqli_fetch_assoc($produtos)): ?>
-        <div class="produto">
-            <p><strong>ID:</strong> <?= $res['id'] ?></p>
-            <p><strong>Nome:</strong> <?= htmlspecialchars($res['nome']) ?></p>
-            <p><strong>Preço:</strong> R$ <?= number_format($res['preco'], 2, ',', '.') ?></p>
-            <p><strong>Descrição:</strong> <?= nl2br(htmlspecialchars($res['descricao'])) ?></p>
-            <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>"></p>
-            <a href="moderar.php?excluir=<?= $res['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-            <?php if($editar_id == $res['id']): ?>
-                <form method="post" action="moderar.php">
-                    <input type="hidden" name="id" value="<?= $res['id'] ?>">
-                    <input type="text" name="nome" value="<?= htmlspecialchars($res['nome']) ?>" required><br>
-                    <textarea name="descricao" required><?= htmlspecialchars($res['descricao']) ?></textarea><br>
-                    <input type="number" step="0.01" name="preco" value="<?= $res['preco'] ?>" required><br>
-                    <input type="submit" name="editar" value="Salvar">
-                    <a href="moderar.php">Cancelar</a>
-                </form>
-            <?php else: ?>
-                <a href="moderar.php?editar=<?= $res['id'] ?>">Editar</a>
-            <?php endif; ?>
+             
